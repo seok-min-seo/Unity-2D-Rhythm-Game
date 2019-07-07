@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\BackgroundBehaviour.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\NoteBehaviour.cs" />
+    <Compile Include="Assets\Scripts\NoteController.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity Project/Git Hub/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
