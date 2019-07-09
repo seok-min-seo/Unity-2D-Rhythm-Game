@@ -1,0 +1,2 @@
+D:\Unity Project\Git Hub\Unity-2D-Rhythm-Game\Unity-2D-Rhythm-Game\Unity-2D-Rhythm-Game\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\Unity Project\Git Hub\Unity-2D-Rhythm-Game\Unity-2D-Rhythm-Game\Unity-2D-Rhythm-Game\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
