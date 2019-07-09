@@ -17,13 +17,14 @@ public class GameManager : MonoBehaviour
     public float notespeed;
 
     public GameObject scoreUI;
-    private float score;
+    public float score;
     private Text scoreText; //스코어 텍스트를 화면ㅇ ㅔ보여주기
 
     public GameObject comboUI; //내부적으로 콤보를 처리해주기
     private int combo;
     private Text comboText; //콤보텍스트
     private Animator comboAnimator;  // 콤보가 추가 될때마다 애니메이터를 보여줘야하기떄문
+    public int maxCombo;
 
     public enum judges {  NONE = 0, BAD, GOOD, PERFECT, MISS };
     public GameObject judgeUI;
@@ -39,6 +40,9 @@ public class GameManager : MonoBehaviour
     //음악 변수
     private AudioSource audioSource;
     public string music = "1";
+
+    //자동 판정 모드 변수
+    public bool autoPerfect;
 
     //음악을 실행하는 함수입니다.
     void MusicStart()
@@ -119,6 +123,11 @@ public class GameManager : MonoBehaviour
         {
             comboText.text = "COMBO " + combo.ToString();
             comboAnimator.SetTrigger("Show");
+        }
+        if(maxCombo < combo)
+        {
+            maxCombo = combo;
+
         }
     }
 
