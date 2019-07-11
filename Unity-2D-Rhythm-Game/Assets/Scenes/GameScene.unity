@@ -971,15 +971,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notespeed: 0.1
   scoreUI: {fileID: 1655139422}
+  score: 0
   comboUI: {fileID: 369989957}
+  maxCombo: 0
   judgeUI: {fileID: 1787951637}
   trails:
   - {fileID: 2023311821}
   - {fileID: 535670077}
   - {fileID: 1748060293}
   - {fileID: 67756538}
-  music: 1
-  autoPerfect: 1
+  autoPerfect: 0
 --- !u!4 &716988739
 Transform:
   m_ObjectHideFlags: 0
