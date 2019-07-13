@@ -293,6 +293,12 @@
     <Reference Include="Google.MiniJson">
       <HintPath>D:/Unity Project/Git Hub/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Sharpen">
+      <HintPath>D:/Unity Project/Git Hub/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Database">
+      <HintPath>D:/Unity Project/Git Hub/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Assets/Firebase/Plugins/Mono/Firebase.Database.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Compat">
       <HintPath>D:/Unity Project/Git Hub/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
     </Reference>
@@ -307,12 +313,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>D:/Unity Project/Git Hub/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Database">
-      <HintPath>D:/Unity Project/Git Hub/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Assets/Firebase/Plugins/Mono/Firebase.Database.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Sharpen">
-      <HintPath>D:/Unity Project/Git Hub/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Unity-2D-Rhythm-Game/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/유니티/2019.1.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
