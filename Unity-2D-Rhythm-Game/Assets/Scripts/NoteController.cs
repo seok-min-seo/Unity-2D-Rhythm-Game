@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Firebase;
+using Firebase.Unity.Editor;
+using Firebase.Database;
 
 public class NoteController : MonoBehaviour
 {
@@ -113,7 +116,46 @@ public class NoteController : MonoBehaviour
         PlayerInformation.score = GameManager.instance.score;
         PlayerInformation.musicTitle = musicTitle;
         PlayerInformation.musicArtist = musicArtist;
+        AddRank();
         SceneManager.LoadScene("GameResultScene");
+        
+    }
+
+    //순위 정보를 담는 Rank 클래스를 정의합니다.
+    
+       class Rank
+    {
+        public string email;
+        public int score;
+        public double timestamp;
+
+        public Rank(string email, int score, double timestamp)
+        {
+            this.email = email;
+            this.score = score;
+            this.timestamp = timestamp;
+        }
+    }
+
+    void AddRank()
+    {
+        //데이터 베이스 접속 성정하기
+        DatabaseReference reference;
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://unity-rhythm-game-tutori-3cbbb.firebaseio.com/");
+        reference = FirebaseDatabase.DefaultInstance.RootReference;
+        //삽입할 데이터 준비하기
+        DateTime now = DateTime.Now.ToLocalTime();
+        TimeSpan span = (now - new DateTime(1970, 1, 1, 0, 0, 0).ToLocalTime());
+        int timestamp = (int)span.TotalSeconds;
+        Rank rank = new Rank(PlayerInformation.auth.CurrentUser.Email, (int)PlayerInformation.score, timestamp);
+        //랭크에 현자 사용자가 플레이한 플레이 이메일과 점수, 시간을 초기화함
+        string json = JsonUtility.ToJson(rank);
+        //랭킹 점수 데이터 삽입하기
+        reference.Child("ranks").Child(PlayerInformation.selectedMusic).Child(PlayerInformation.auth.CurrentUser.UserId).SetRawJsonValueAsync(json);
+        //랭크스라는 데이터셋에 곡번호에 자식으로, 현재 플레이한 사람의 아이디 값이 그 데이터가 들어갈 위치값이라고 할수잇고
+        //SetRawJsonValueAsync(json)로 우리가 넣고자 하는 값을 넣어서 새로운점수로 업데이트가된다
+        //우리가 어떤곡을 선택해서 어떤 사람이 햇는지가 Rank라는 클래스안에  담겨서 사용이된다
+
 
     }
 

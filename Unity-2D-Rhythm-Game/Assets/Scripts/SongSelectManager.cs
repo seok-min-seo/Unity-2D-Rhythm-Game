@@ -14,6 +14,9 @@ public class SongSelectManager : MonoBehaviour
     private int musicIndex;
     private int musicCount = 4;
 
+    //회원가입 UI
+    public Text userUI;
+
     private void UpdateSong(int musicIndex)
     {
         AudioSource audioSource = GetComponent<AudioSource>();
@@ -54,6 +57,7 @@ public class SongSelectManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        userUI.text = PlayerInformation.auth.CurrentUser.Email + "님, 환영합니다.";
         musicIndex = 1;
         UpdateSong(musicIndex);
     }
@@ -63,6 +67,13 @@ public class SongSelectManager : MonoBehaviour
         PlayerInformation.selectedMusic = musicIndex.ToString();
         SceneManager.LoadScene("GameScene");
 
+    }
+
+    public void Logout()
+    {
+        PlayerInformation.auth.SignOut();
+        // 파이어베이스에 기본적으로 포함되어있는 함수로서 자동으로 로그아웃이 가능하게함
+        SceneManager.LoadScene("LoginScene");
     }
 
     // Update is called once per frame

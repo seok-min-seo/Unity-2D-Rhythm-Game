@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "965994577543",
+    "firebase_url": "https://unity-rhythm-game-tutori-3cbbb.firebaseio.com",
+    "project_id": "unity-rhythm-game-tutori-3cbbb",
+    "storage_bucket": "unity-rhythm-game-tutori-3cbbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965994577543:android:f5d03a77b7c15328",
+        "android_client_info": {
+          "package_name": "com.sukddaksoftware.slub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965994577543-5e6h6fmeodp4snhbctn4ds4jl50ftagm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUuJrhIVdLi1cioiEnATjGM5BM-j7trwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965994577543-5e6h6fmeodp4snhbctn4ds4jl50ftagm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
